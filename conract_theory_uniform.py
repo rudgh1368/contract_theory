@@ -28,7 +28,9 @@ def incentive_X_delay_graph(Contract_item = []) :
     plt.title("Relationships between delay and incentive")
     plt.grid(True)
     plt.legend()
+    # plt.savefig("contract1.png", dpi=350)
     plt.show()
+
 
 def HubTpye_X_HubUtility_graph(Hub_type={}, N = 0, st=0, dt=0) :
     graph_color = ['c', 'b', 'g', 'r', 'm', 'y', 'k']
@@ -49,7 +51,10 @@ def HubTpye_X_HubUtility_graph(Hub_type={}, N = 0, st=0, dt=0) :
     plt.title("Relationships between Type and Utility (Hub Node)")
     plt.grid(True)
     plt.legend()
+    # plt.savefig("contract2.png", dpi=350)
     plt.show()
+
+
 
 class Contract_item :
     def __init__(self, name):
@@ -214,3 +219,4 @@ contract_item3.execute(x0, bnds)
 
 incentive_X_delay_graph([contract_item1,contract_item2, contract_item3])
 HubTpye_X_HubUtility_graph(contract_item3.Hub_type_U,N = contract_item3.N, st = 14, dt = 19)
+
